@@ -3,16 +3,13 @@
 }
 
 .playBackContainer {
-border-radius: 3em;
+  border-radius: 3em;
   margin-bottom: 0;
   height: 11em;
   display: flex;
   border-radius: 16px;
   background: #ef8f68;
-  box-shadow: inset 8px 8px 16px #a36147,
-              inset -8px -8px 16px #ffbd89;
-
-
+  box-shadow: inset 8px 8px 16px #a36147, inset -8px -8px 16px #ffbd89;
 }
 
 .sideContainers {
@@ -23,7 +20,6 @@ border-radius: 3em;
   margin-top: 2;
   margin-bottom: 10px;
   padding: 2em;
-
 }
 .menuButton {
   width: 100%;
@@ -44,19 +40,23 @@ border-radius: 3em;
 
 .btnContainer {
   width: 90%;
-
+  transition: 0.2s ease-in;
   background-color: #fffffd;
   margin: 1em;
   border-radius: 14px;
 }
 
 .btnContainer:hover {
-  border-radius: 14px;
-  background: #fffffd;
-  box-shadow: 7px 7px 14px #834f39, -7px -7px 14px #ffcf97;
+  transform: scale(1.1);
+
+  border-radius: 26px;
+  background: #ef8f68;
+  box-shadow: 5px 5px 32px #ba7051, -5px -5px 32px #ffae7f;
 }
 
 .userCard {
+  transition: 0.2s ease-in;
+
   height: 7em;
   margin: 1em;
   margin-top: 2em;
@@ -66,6 +66,9 @@ border-radius: 3em;
   box-shadow: 5px 5px 29px #f0f0ee, -5px -5px 29px #ffffff;
 }
 
+.userCard :hover {
+  transform: scale(1.04);
+}
 .userCard p,
 small {
   color: #ef8f68;
@@ -142,15 +145,20 @@ small {
   margin-top: 2em;
   height: 15em;
   width: 15em;
+  transition: 0.2s ease-in;
 
   border-radius: 42px;
   background: #fffffd;
   box-shadow: 5px 5px 10px #666665, -5px -5px 10px #ffffff;
 }
 
+.albumCardContainer img:hover {
+  transform: scale(1.04);
+}
+
 .albumCardContainer h6 {
   color: #ef8f68;
   text-align: start;
   padding-left: 4em;
-font-size: 1em;
+  font-size: 1em;
 }

@@ -4,8 +4,8 @@ import userIcon from "../Assets/user.png";
 export default function UsersColumn() {
   return (
     <div className="sideContainers">
-      users thh nbhbhbh
-      <UserCard />
+
+      <UserCard  />
       <UserCard />
       <UserCard />
     </div>
@@ -14,18 +14,17 @@ export default function UsersColumn() {
 
 export function UserCard() {
   return (
-    <div className="userCard">
-      <Row>
+
+      <Row className="userCard" >
         <Col md={4}>
           <img src={userIcon} alt="user" />
         </Col>
-
 
         <Col md={8}>
           <p>firstName lastName</p>
           <small>2.8mil followers</small>
         </Col>
       </Row>
-    </div>
+
   );
 }
