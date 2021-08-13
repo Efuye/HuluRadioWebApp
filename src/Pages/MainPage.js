@@ -9,7 +9,7 @@ import { Col, Row } from "reactstrap";
 export default function MainPage() {
   return (
     <div className="parentParentContainer">
-      <Row>
+      <Row className="topParent" >
         <Col>
           <Menutab />
         </Col>
