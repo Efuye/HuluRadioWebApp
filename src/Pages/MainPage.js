@@ -9,23 +9,24 @@ import { Col, Row } from "reactstrap";
 export default function MainPage() {
   return (
     <div className="parentParentContainer">
-      <Row className="topParent" >
-        <Col>
-          <Menutab />
-        </Col>
 
-        <Col>
-          <CenterContainer />
-        </Col>
+        <Row className="topParent">
+          <Col>
+            <Menutab />
+          </Col>
 
-        <Col>
-          <UsersColumn />
-        </Col>
-      </Row>
-      <Row>
+          <Col>
+            <CenterContainer />
+          </Col>
 
-        <PlaybackContoreller />
-      </Row>
+          <Col>
+            <UsersColumn />
+          </Col>
+        </Row>
+        <Row md={12} sm={12}>
+          <PlaybackContoreller />
+        </Row>
+
     </div>
   );
 }

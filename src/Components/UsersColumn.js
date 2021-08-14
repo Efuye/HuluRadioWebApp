@@ -4,7 +4,6 @@ import userIcon from "../Assets/user.png";
 export default function UsersColumn() {
   return (
     <div className="sideContainers">
-
       <UserCard  />
       <UserCard />
       <UserCard />

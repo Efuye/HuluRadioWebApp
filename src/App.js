@@ -1,10 +1,15 @@
 import MainPage from "./Pages/MainPage";
 import "./App.css";
-import './Styles/AllStyles.css'
+import "./Styles/AllStyles.css";
+import Store from "./Store/Store";
+
+
 function App() {
   return (
     <div className="App">
-      <MainPage />
+      <Store>
+        <MainPage />
+      </Store>
     </div>
   );
 }

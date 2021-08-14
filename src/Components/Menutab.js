@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Collapse, Button, Row, Col } from "reactstrap";
 import { GrFormNext } from "react-icons/gr";
-import { data } from "../Data/data";
+
+import { Context } from "../Store/Store";
 export default function Menutab() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeBtn, setActiveBtn] = useState(0);
+  const [state, setState] = useContext(Context);
 
   const toggle = () => setIsOpen(!isOpen);
-  console.log(activeBtn);
   return (
     <div className="sideContainers">
       <Button
@@ -21,10 +22,10 @@ export default function Menutab() {
       </Button>
       <Collapse isOpen={isOpen}>
         <Row>
-          <Col md={2}>{""}</Col>
+          <Col md={1}>{""}</Col>
 
           <Col>
-            {data.map((item) => (
+            {state.data.map((item) => (
               <div
                 className={
                   activeBtn === item.stationId
@@ -32,9 +33,8 @@ export default function Menutab() {
                     : "btnContainer"
                 }
                 key={item.id}
-                md={9}
+                md={10}
               >
-                {/* <label type="button" class="btn btn-primary btn-block" /> */}
                 <label onClick={() => setActiveBtn(item.stationId)} color="">
                   {item.stationName}
 
@@ -49,7 +49,6 @@ export default function Menutab() {
                     ""
                   )}
 
-                  {/* /> */}
                 </label>
               </div>
             ))}

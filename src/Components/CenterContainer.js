@@ -1,15 +1,40 @@
-import React from "react";
-import { data } from "../Data/data";
+import React, { useContext } from "react";
+
+import { Context } from "../Store/Store";
+
 export default function CenterContainer() {
+  const [state, setState] = useContext(Context);
+
+  console.log(state.activeStation);
+
   return (
     <div className="centerContainer">
-      {data.map((item) => {
+      {state.data.map((item) => {
         return (
-          <AlbumCard
-            stationName={item.stationName}
-            lastUpdated={item.stationLastUpdated}
-            icon={item.stationIcon}
-          />
+          <div
+            onClick={() =>
+              setState({
+                ...state,
+                activeStation: {
+                  id: item.stationId,
+                  stationName: item.stationName,
+                  icon: item.stationIcon,
+                  stationDescription: item.stationDescription,
+                  stationStreamUrl: item.stationStreamUrl,
+                  stationType: item.stationType,
+                  stationViewership: item.stationViewership,
+                  stationWebsite: item.stationWebsite,
+                  stationLastUpdated: item.stationLastUpdated,
+                },
+              })
+            }
+          >
+            <AlbumCard
+              stationName={item.stationName}
+              lastUpdated={item.stationLastUpdated}
+              icon={item.stationIcon}
+            />
+          </div>
         );
       })}
     </div>
@@ -21,8 +46,8 @@ function AlbumCard({ stationName, icon, lastUpdated }) {
     <div className="albumCardContainer">
       <img src={icon} alt="user" />
 
-      <h6>{stationName} </h6>
-      <h6>{lastUpdated}</h6>
+      <h4>{stationName} </h4>
+      {/* <h6>{lastUpdated}</h6> */}
     </div>
   );
 }
