@@ -34,15 +34,23 @@ export default function Menutab() {
                 key={item.id}
                 md={9}
               >
-                <Button onClick={() => setActiveBtn(item.stationId)} color="">
+                {/* <label type="button" class="btn btn-primary btn-block" /> */}
+                <label onClick={() => setActiveBtn(item.stationId)} color="">
                   {item.stationName}
-                  <GrFormNext
-                    style={{
-                      marginLeft: "1em",
-                      marginRight: "1em",
-                    }}
-                  />
-                </Button>
+
+                  {activeBtn === item.stationId ? (
+                    <GrFormNext
+                      style={{
+                        marginLeft: "1em",
+                        marginRight: "1em",
+                      }}
+                    />
+                  ) : (
+                    ""
+                  )}
+
+                  {/* /> */}
+                </label>
               </div>
             ))}
           </Col>
