@@ -12,7 +12,7 @@ export default function Menutab() {
   const [state, setState] = useContext(Context);
   console.log(state);
   const toggle = () => setIsOpen(!isOpen);
-  const toggleAdmin = () => setIsOpenAdmin(!isOpen);
+  const toggleAdmin = () => setIsOpenAdmin(!isOpenAdmin);
   return (
     <div className="sideContainers">
       <Button

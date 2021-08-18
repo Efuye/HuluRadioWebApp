@@ -157,11 +157,12 @@ small {
 }
 
 .albumCardContainer {
-  height: 20em;
-  width: 19em;
+  height: 15em;
+  width: 13em;
   font-size: 16px;
-  margin: 1.3em;
-  transition: 0.1s ease-in-out;
+  margin: 1.5em;
+  transition: 0.5s ease-out;
+  transition: 0.15s ease-in;
 }
 
 .albumCardContainer:hover {
@@ -169,10 +170,10 @@ small {
   align-self: center;
   justify-content: center;
   align-content: center;
-  height: 20em;
-  width: 17em;
+  height: 15em;
+  width: 13em;
   font-size: 16px;
-  border-radius: 1.5em;
+  border-radius: 1em;
   background: #fffffd;
   box-shadow: 5px 5px 10px #666665, -5px -5px 10px #ffffff;
   font-weight: 800;
@@ -182,9 +183,9 @@ small {
 .albumCardContainer img {
   margin-bottom: 1em;
   margin-top: 0.5em;
-  height: 15em;
-  width: 15em;
-  border-radius: 22px;
+  height: 10em;
+  width: 10em;
+  border-radius: 12px;
   background: #fffffd;
   box-shadow: 5px 5px 10px #666665, -5px -5px 10px #ffffff;
 }
