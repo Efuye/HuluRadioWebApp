@@ -1,7 +1,9 @@
 .parentParentContainer {
   align-content: space-around;
 }
-
+.topParent {
+  align-content: space-around;
+}
 .playBackContainer {
   border-radius: 3em;
   margin-bottom: 0;
@@ -121,7 +123,7 @@ small {
   }
 }
 
-.songTitleContainer  {
+.songTitleContainer {
   color: #ffffff;
 }
 
@@ -202,4 +204,13 @@ small {
   padding-left: 2em;
 
   font-size: 1.2em;
+}
+
+
+.modal-backdrop{
+  backdrop-filter: blur(25px);
+  background-color: #01223770;
+}
+.modal-backdrop.in{
+  opacity: 1 !important;
 }
