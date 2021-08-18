@@ -5,7 +5,7 @@ import { Context } from "../Store/Store";
 export default function CenterContainer() {
   const [state, setState] = useContext(Context);
 
-  console.log(state.activeStation);
+  // console.log(state.activeStation);
 
   return (
     <div className="centerContainer">

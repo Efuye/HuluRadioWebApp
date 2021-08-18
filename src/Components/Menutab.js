@@ -7,7 +7,7 @@ export default function Menutab() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeBtn, setActiveBtn] = useState(0);
   const [state, setState] = useContext(Context);
-
+  console.log(state);
   const toggle = () => setIsOpen(!isOpen);
   return (
     <div className="sideContainers">
@@ -20,6 +20,16 @@ export default function Menutab() {
       >
         Radios
       </Button>
+
+      <Button
+        className="menuButton"
+        color="#ef8f68"
+        outline
+        onClick={toggle}
+        style={{ marginBottom: "1rem", color: "#ef8f68", fontSize: "20px" }}
+      >
+        Admin
+      </Button>
       <Collapse isOpen={isOpen}>
         <Row>
           <Col md={1}>{""}</Col>
@@ -27,6 +37,22 @@ export default function Menutab() {
           <Col>
             {state.data.map((item) => (
               <div
+                onClick={() =>
+                  setState({
+                    ...state,
+                    activeStation: {
+                      id: item.stationId,
+                      stationName: item.stationName,
+                      icon: item.stationIcon,
+                      stationDescription: item.stationDescription,
+                      stationStreamUrl: item.stationStreamUrl,
+                      stationType: item.stationType,
+                      stationViewership: item.stationViewership,
+                      stationWebsite: item.stationWebsite,
+                      stationLastUpdated: item.stationLastUpdated,
+                    },
+                  })
+                }
                 className={
                   activeBtn === item.stationId
                     ? "btnContainerActive"
@@ -48,7 +74,6 @@ export default function Menutab() {
                   ) : (
                     ""
                   )}
-
                 </label>
               </div>
             ))}

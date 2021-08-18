@@ -36,16 +36,8 @@ export default function MainPage() {
             backgroundColor: "rgba(0,0,0,0.5)",
           }}
         >
-          <ModalHeader toggle={toggle}>Log in First </ModalHeader>
-          <ModalBody
-            style={
-              {
-                // width: "60vh",
-                // height: "20vh",
-                // padding: "7em",
-              }
-            }
-          >
+          <ModalHeader toggle={toggle}>LogIn First </ModalHeader>
+          <ModalBody>
             <Form>
               <FormGroup className="m-2  p-2">
                 <Input

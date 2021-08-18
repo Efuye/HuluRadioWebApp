@@ -10,8 +10,8 @@ import { Context } from "../Store/Store";
 
 export default function PlaybackContoreller() {
   const [value, setValue] = useState(0);
-  const [state, setState] = useContext(Context);
-console.log(state);
+  const [state, ] = useContext(Context);
+  // console.log(state);
   return (
     <Row className="playBackContainer">
       <Col md={4} className="nowplayindContainer">
