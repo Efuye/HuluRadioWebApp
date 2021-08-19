@@ -207,11 +207,21 @@ small {
   font-size: 1.2em;
 }
 
-
-.modal-backdrop{
+.modal-backdrop {
   backdrop-filter: blur(25px);
   background-color: #01223770;
 }
-.modal-backdrop.in{
+.modal-backdrop.in {
   opacity: 1 !important;
+}
+
+Table {
+  font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+tbody tr :hover {
+  transform: scale(1.1);
+  /* transform: scale3d(1.2, 1.2, 1.2); */
+  transition: 0.2s ease-in-out;
 }

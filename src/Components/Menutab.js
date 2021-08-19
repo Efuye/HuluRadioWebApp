@@ -4,7 +4,6 @@ import { GrFormNext } from "react-icons/gr";
 
 import { Context } from "../Store/Store";
 export default function Menutab() {
-  const adminOptions = ["Auth", "Aoth", "Accounting"];
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenAdmin, setIsOpenAdmin] = useState(false);
 
@@ -80,46 +79,16 @@ export default function Menutab() {
         className="menuButton"
         color="#ef8f68"
         outline
-        onClick={toggleAdmin}
+        onClick={() =>
+          setState({
+            ...state,
+            admin: !state.admin,
+          })
+        }
         style={{ marginBottom: "1rem", color: "#ef8f68", fontSize: "20px" }}
       >
         Admin
       </Button>
-
-      <Collapse isOpen={isOpenAdmin}>
-        <Row>
-          <Col md={1}>{""}</Col>
-
-          <Col>
-            {adminOptions.map((item) => (
-              <div
-                className={
-                  activeBtn === item.stationId
-                    ? "btnContainerActive"
-                    : "btnContainer"
-                }
-                key={item.id}
-                md={10}
-              >
-                <label onClick={() => setActiveBtn(item)} color="">
-                  {item}
-
-                  {activeBtn === item ? (
-                    <GrFormNext
-                      style={{
-                        marginLeft: "1em",
-                        marginRight: "1em",
-                      }}
-                    />
-                  ) : (
-                    ""
-                  )}
-                </label>
-              </div>
-            ))}
-          </Col>
-        </Row>
-      </Collapse>
     </div>
   );
 }
